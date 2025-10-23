@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | Hermès Luxe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('images/log\ in.jpg') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .login-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      padding: 30px;
+    }
+    .login-card h3 {
+      font-weight: bold;
+      color: #333;
+    }
+    .btn-dark {
+      background-color: #2c2c2c;
+      border: none;
+    }
+    .btn-dark:hover {
+      background-color: #000;
+    }
+  </style>
+</head>
+<!-- Forgot Password Modal -->
+<div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="forgotModalLabel">Reset Password</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">Enter your email address and we’ll send you a link to reset your password.</p>
+        <form id="forgotForm" onsubmit="sendResetLink(event)">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="forgotEmail" placeholder="you@example.com" required>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Send Reset Link</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function sendResetLink(event) {
+  event.preventDefault();
+  const email = document.getElementById('forgotEmail').value;
+  if (email.trim() === "") {
+    alert("Please enter your email address.");
+  } else {
+    alert("A password reset link has been sent to " + email);
+    const modal = bootstrap.Modal.getInstance(document.getElementById('forgotModal'));
+    modal.hide(); 
+  }
+}
+</script>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Hermès Luxe</a>
+  </div>
+</nav>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="login-card">
+        <h3 class="text-center mb-4">Welcome Back</h3>
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="****" required>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="remember">
+              <label class="form-check-label" for="remember">Remember me</label>
+            </div>
+
+            <div class="text-end">
+              <a href="#" class="text-muted small" data-bs-toggle="modal" data-bs-target="#forgotModal">Forgot password?</a>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Login</button>
+          <p class="text-center mt-3">Don't have an account? <a href="register.html" class="text-dark fw-bold">Register here</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 Hermès Luxe | Crafted for Sophistication</p>
+    
+    <small class="d-block mb-2">
+      Follow us:
+      <i class="bi bi-instagram mx-1"></i>
+      <i class="bi bi-facebook mx-1"></i>
+      <i class="bi bi-twitter mx-1"></i>
+    </small>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <h6>Contact Us</h6>
+        <p class="mb-1">📍 123 Avenue des Champs-Élysées, Paris</p>
+        <p class="mb-1">📞 +33 1 23 45 67 89</p>
+        <p>✉️ support@hermesluxe.com</p>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+          <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h6>Store Hours</h6>
+        <p class="mb-1">Mon - Fri: 10:00 AM - 8:00 PM</p>
+        <p>Sat - Sun: 11:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+
+    <hr class="border-light">
+    <small class="text-muted">Designed with passion by Hermès Luxe Team</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email && password) {
+      alert("Login successful! Redirecting to home page...");
+      window.location.href = "index.html"; 
+    } else {
+      alert("Please enter your email and password.");
+    }
+  });
+</script>
+
+</body>
+</html>

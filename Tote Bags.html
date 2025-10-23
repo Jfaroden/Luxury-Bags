@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermès Tote Bags</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <style>
+  .card {
+    height: 100%;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+</style>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Hermès Luxe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="products.html">All Products</a></li>
+              <li><a class="dropdown-item active" href="Tote Bags.html">Tote Bags</a></li>
+              <li><a class="dropdown-item" href="Mini Bags.html">Mini Bags</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-light py-5 text-center">
+    <div class="container">
+      <h1 class="fw-bold">Hermès Tote Bags</h1>
+      <p class="text-muted">Spacious, sophisticated, and designed for everyday elegance.</p>
+    </div>
+  </header>
+
+  <div class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Garden Party Tote.jpg" class="card-img-top" alt="Garden Party Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Garden Party Tote</h5>
+            <p class="card-text">Classic and roomy design in canvas and leather.</p>
+            <p class="fw-bold">$3,850</p>
+            <button class="btn btn-dark" onclick="addToCart('Garden Party Tote', 3850,'Images/t-Garden Party Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Fourre-Tout Tote.jpg" class="card-img-top" alt="Fourre-Tout Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Fourre-Tout Tote</h5>
+            <p class="card-text">Lightweight canvas tote with signature Hermès stripes.</p>
+            <p class="fw-bold">$1,400</p>
+            <button class="btn btn-dark" onclick="addToCart('Fourre-Tout Tote', 1400,'Images/t-Fourre-Tout Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Cabas Tote.jpeg" class="card-img-top" alt="Cabas Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cabas Tote</h5>
+            <p class="card-text">Elegant and versatile tote perfect for travel or work.</p>
+            <p class="fw-bold">$2,950</p>
+            <button class="btn btn-dark" onclick="addToCart('Cabas Tote', 2950,'Images/t-Cabas Tote.jpeg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Victoria Tote.jpg" class="card-img-top" alt="Victoria Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Victoria Tote</h5>
+            <p class="card-text">Smooth Clemence leather with ample space for essentials.</p>
+            <p class="fw-bold">$4,200</p>
+            <button class="btn btn-dark" onclick="addToCart('Victoria Tote', 4200,'Images/t-Victoria Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Evelyne Tote.jpg" class="card-img-top" alt="Evelyne Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Evelyne Tote</h5>
+            <p class="card-text">Perforated “H” design with soft leather texture.</p>
+            <p class="fw-bold">$3,750</p>
+            <button class="btn btn-dark" onclick="addToCart('Evelyne Tote', 3750,'Images/t-Evelyne Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Picotin Tote.jpg" class="card-img-top" alt="Picotin Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Picotin Tote</h5>
+            <p class="card-text">Signature bucket tote with leather strap and lock.</p>
+            <p class="fw-bold">$3,950</p>
+            <button class="btn btn-dark" onclick="addToCart('Picotin Tote', 3950,'Images/t-Picotin Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Market Tote.jpg" class="card-img-top" alt="Market Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Market Tote</h5>
+            <p class="card-text">Practical, soft-sided bag for daily errands.</p>
+            <p class="fw-bold">$2,600</p>
+            <button class="btn btn-dark" onclick="addToCart('Market Tote', 2600,'Images/t-Market Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Feather Tote.jpg" class="card-img-top" alt="Feather Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Feather Tote</h5>
+            <p class="card-text">Lightweight, elegant tote with Hermès logo pattern.</p>
+            <p class="fw-bold">$2,300</p>
+            <button class="btn btn-dark" onclick="addToCart('Feather Tote', 2300,'Images/t-Feather Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Cargo Tote.jpg" class="card-img-top" alt="Cargo Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cargo Tote</h5>
+            <p class="card-text">Canvas tote with outer pockets and leather details.</p>
+            <p class="fw-bold">$4,500</p>
+            <button class="btn btn-dark" onclick="addToCart('Cargo Tote', 4500,'Images/t-Cargo Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="Images/t-Kelly Depeches Tote.jpg" class="card-img-top" alt="Kelly Depeches Tote">
+          <div class="card-body text-center">
+            <h5 class="card-title">Kelly Depeches Tote</h5>
+            <p class="card-text">Professional tote inspired by Hermès Kelly design.</p>
+            <p class="fw-bold">$5,100</p>
+            <button class="btn btn-dark" onclick="addToCart('Kelly Depeches Tote', 5100,'Images/t-Kelly Depeches Tote.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 Hermès Luxe | Crafted for Sophistication</p>
+    
+    <small class="d-block mb-2">
+      Follow us:
+      <i class="bi bi-instagram mx-1"></i>
+      <i class="bi bi-facebook mx-1"></i>
+      <i class="bi bi-twitter mx-1"></i>
+    </small>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <h6>Contact Us</h6>
+        <p class="mb-1">📍 123 Avenue des Champs-Élysées, Paris</p>
+        <p class="mb-1">📞 +33 1 23 45 67 89</p>
+        <p>✉️ support@hermesluxe.com</p>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+          <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h6>Store Hours</h6>
+        <p class="mb-1">Mon - Fri: 10:00 AM - 8:00 PM</p>
+        <p>Sat - Sun: 11:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+
+    <hr class="border-light">
+    <small class="text-muted">Designed with passion by Hermès Luxe Team</small>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+function addToCart(name, price, image) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  let existingItem = cart.find(item => item.name === name);
+
+  if (existingItem) {
+    existingItem.quantity += 1; 
+  } else {
+    cart.push({ name, price,image, quantity: 1 });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  
+  alert(`${name} has been added to your cart!`);
+}
+</script>
+</body>
+</html>
